@@ -45,7 +45,7 @@
 //{
 //	if (n < 10)
 //	{
-//		return (n % 10);
+//		return n;
 //	}
 //	else
 //	{
@@ -145,7 +145,7 @@
 //	print(n);
 //	return 0;
 //}
-//int pow(int n,int k)
+//int Pow(int n,int k)
 //{
 //	if (0 == k)
 //	{
@@ -163,7 +163,7 @@
 //	int ret = 0;
 //	printf("请输入一个数和它的幂\n");
 //	scanf("%d %d",&n,&k);
-//	ret = pow(n,k);
+//	ret = Pow(n,k);
 //	printf("%d \n",ret);
 //	return 0;
 //}

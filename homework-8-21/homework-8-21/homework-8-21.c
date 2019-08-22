@@ -4,9 +4,9 @@
 //{
 //	int a = 25;
 //	int i = 0;
-//	for (i = 0; i <= 1; i++)
+//	for (i = 31; i <= 1; i--)
 //	{
-//		a = a >> 1;
+//		a = a >> i;
 //		printf("%u \n", a);
 //	}
 //	return 0;
@@ -50,37 +50,37 @@
 //	printf("a和b的平均数为：%lf\n",aver);
 //	return 0;
 //}
-//int main()
-//{
-//	int i = 0;
-//	int j = 0;
-//	int mid = 0;
-//	int arr[] = { 2,4,3,3,5,1,1,2,4,5,6 };
-//	int sz = sizeof(arr) / sizeof(arr[0]) - 1;
-//	for (i = 0; i <= sz; i++)
-//	{
-//		int flag = 0;
-//		for (j = 0; j <= sz; j++)
-//		{
-//			if (i != j &&(arr[i] ^ arr[j]) == 0)
-//			{
-//				flag = 1;
-//				break;
-//			}
-//		}
-//		if (0 == flag)
-//		{
-//			printf("这个数为:\n %d\n",arr[i]);
-//			break;
-//		}
-//	}
-//	for (i = 0; i <= sz; i++)
-//	{
-//		mid = mid ^ arr[i];
-//	}
-//	printf("这个数为：\n %d",mid);
-//	return 0;
-//}
+int main()
+{
+	int i = 0;
+	int j = 0;
+	int mid = 0;
+	int arr[] = { 2,4,3,3,5,1,1,2,4,5,6 };
+	int sz = sizeof(arr) / sizeof(arr[0]) - 1;
+	for (i = 0; i <= sz; i++)
+	{
+		int flag = 0;
+		for (j = 0; j <= sz; j++)
+		{
+			if (i != j &&(arr[i] ^ arr[j]) == 0)
+			{
+				flag = 1;
+				break;
+			}
+		}
+		if (0 == flag)
+		{
+			printf("这个数为:\n %d\n",arr[i]);
+			break;
+		}
+	}
+	for (i = 0; i <= sz; i++)
+	{
+		mid = mid ^ arr[i];
+	}
+	printf("这个数为：\n %d",mid);
+	return 0;
+}
 //int my_strlen(char *p)
 //{
 //	if (*p == '\0')
