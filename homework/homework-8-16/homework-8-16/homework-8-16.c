@@ -13,14 +13,14 @@ void game()
 		player_move(board, ROW, COL);
 		display(board, ROW, COL);
 		mid = iswin(board, ROW, COL);
-		if (mid != 'q')
+		if (mid != 'c')
 		{
 			break;
 		}
 		computer_move(board, ROW, COL);
 		display(board, ROW, COL);
 		mid = iswin(board, ROW, COL);
-		if (mid != 'q')
+		if (mid != 'c')
 		{
 			break;
 		}
@@ -31,7 +31,7 @@ void game()
 		}
 		else if (mid == '#')
 		{
-			printf("µÁƒ‘”Æ");
+			printf("µÁƒ‘”Æ\n");
 		}
 		else if (mid == 'p')
 		{

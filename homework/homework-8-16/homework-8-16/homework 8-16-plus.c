@@ -86,16 +86,18 @@ void computer_move(char board[ROW][COL], int row, int col)
 char iswin(char board[ROW][COL], int row, int col)
 {
 	int i = 0;
+	int j = 0;
 	for (i = 0; i < row; i++)
 	{
-		if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][1] != ' ')
+		
+	if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][1] != ' ')
 		{
 			return board[i][1];
 		}
 	}
 	for (i = 0; i < col; i++)
 	{
-		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board != ' ')
+		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[1][i] != ' ')
 		{
 			return board[1][i];
 		}
@@ -113,7 +115,7 @@ char iswin(char board[ROW][COL], int row, int col)
 	{
 		return 'p';
 	}
-	return 'q';
+		return 'c';
 }
 static int isfull(char board[ROW][COL], int row, int col)
 {
