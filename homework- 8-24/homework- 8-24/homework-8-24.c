@@ -60,7 +60,7 @@
 //	my_strcpy (arr, p);
 //	printf("%s\n",arr);
 //	return 0;
-}
+//}
 //char * my_strcat(char *dest, const char *src)
 //{
 //	assert(dest && src);
@@ -81,5 +81,52 @@
 //	char *p = "world";
 //	my_strcat(arr,p);
 //	printf("%s\n",arr);
+//	return 0;
+//}
+//void * my_memcpy(void *dest,void *src, size_t count)
+//{
+//	assert(dest && src);
+//    void *ret = src;
+//	while (count--)
+//	{
+//		*(char *)dest = *(char *)src;
+//		dest = (char *)dest + 1;
+//		src = (char *)src + 1;
+//	}
+//	return ret;
+//}
+//int main()
+//{
+//	int arr1[] = {1,2,3,4,5,6,6,7};
+//	int arr2[20] = { 0 };
+//	my_memcpy(arr2, arr1, 28);
+//	return 0;
+//}
+//void * my_memmove(void *left, void * right, size_t count)
+//{
+//	assert(left && right);
+//	void * ret = left;
+//		if (left > right)
+//		{
+//			while (count--)
+//			{
+//				*((char *)left + count) = *((char *)right + count);
+//			}
+//		}
+//		else
+//		{
+//			while (count--)
+//			{
+//				*(char *)left = *(char *)right;
+//				left = (char *)left + 1;
+//				right = (char *)right + 1;
+//			}
+//		}
+//		return ret;
+//}
+//int main()
+//{
+//	int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//	my_memmove(arr +2,arr, 16);
 //	return 0;
 //}
