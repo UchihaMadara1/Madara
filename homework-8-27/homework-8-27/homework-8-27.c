@@ -1,5 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 //int main()
 //{
 //	int a = 10;//开辟一片空间
@@ -65,8 +67,29 @@
 //		printf("不同\n");
 //	return 0;
 //}
+
 int * arr1[10];//整形指针数组
 char * arr2[10];//一级字符指针数组
 char ** arr3[10];//二级字符指针数组
 int * p1[5];//指针数组
 int(*p2)[5];//数组指针
+struct stu
+{
+	char name[20];
+	int age;
+};
+int com_stu_by_name(const void *e1, const void *e2)
+{
+	return strcmp(((struct stu *)e1)->name, ((struct stu*)e2)->name);
+}
+void TEXT()
+{
+	struct stu arr[] = { { "zhangsan", 15 }, { "lisi", 50 }, {"wangwu",20} };
+	int sz = sizeof(arr) / sizeof (arr[0]);
+	qsort(arr, sz, sizeof(arr[0]), com_stu_by_name);
+}
+int main()
+{
+	TEXT();
+	return 0;
+}
