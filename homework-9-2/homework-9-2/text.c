@@ -41,6 +41,7 @@ int main()
 			break;
 		case EXIT:
 		{
+					 DestoryContact(&con);
 					 printf("ÍË³ö³ÌÐò\n");
 					 break;
 		}

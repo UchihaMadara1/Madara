@@ -2,7 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#include <stdlib.h>
+#include <errno.h>
 #define MAX 1000
+#define DEFALT_SZ 3
 typedef struct PeoInfo
 {
 	char name[20];
@@ -30,10 +33,16 @@ enum TEXT
 	ADDR,
 	TELE,
 };
+//typedef struct Contact
+//{
+//	PeoInfo data[MAX];
+//	int sz;//有效元素个数
+//}Contact;
 typedef struct Contact
 {
-	PeoInfo data[MAX];
-	int sz;
+	PeoInfo *data;//存放有效元素的空间
+	int sz;//有效元素个数
+	int capacity;//容量
 }Contact;
 void InitContact(Contact* pcon);
 void AddContact(Contact *pcon);
@@ -43,6 +52,10 @@ int Sort_By_Name(const void *e1, const void *e2);
 void SortContact(Contact *pcon);
 void SearchContact(Contact *pcon);
 void ModifyContact(Contact *pcon);
+void DestoryContact(Contact *pcon);
+
+
+
 
 
 
