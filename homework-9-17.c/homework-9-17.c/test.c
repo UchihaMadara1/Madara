@@ -32,25 +32,32 @@ typedef struct
 
 	//return 0;
 //}
-void Swap(char *dest, int sz)
-{
-	char *p = "%20";
-	assert(dest);
-	while (sz--)
-	{
-		char *cp = p;
-		while (*dest == ' ')
-		{
-			*dest++ = *cp++;
-			sz--;
-		}
-		dest++;
-	}
-}
+//void Swap(char *dest, int sz)
+//{
+//	char *p = "%20";
+//	assert(dest);
+//	while (sz--)
+//	{
+//		char *cp = p;
+//		while (*dest == ' ')
+//		{
+//			*dest++ = *cp++;
+//			sz--;
+//		}
+//		dest++;
+//	}
+//}
+//int main()
+//{
+//	char arr[] = "abc   defgx   yz";
+//	int sz = strlen(arr);
+//	Swap(arr,sz);
+//	return 0;
+//}
 int main()
 {
-	char arr[] = "abc   defgx   yz";
-	int sz = strlen(arr);
-	Swap(arr,sz);
+	int nus[] = {2,7,11,15};
+	int target = 9;
+
 	return 0;
 }
